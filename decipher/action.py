@@ -24,10 +24,10 @@ def transcribe(video_in, output_dir, model, language, task, subs):
 
     gpu = torch.cuda.is_available()
     model = whisper.load_model(model)
-    # result = model.transcribe(
-    #    audio_file, task=task, language=language, verbose=True, fp16=gpu
     result = model.transcribe(
-        audio_file, task=task, language=language, verbose=True
+        audio_file, task=task, language=language, verbose=True, fp16=gpu
+    #result = model.transcribe(
+    #    audio_file, task=task, language=language, verbose=True
     )
     writer = get_writer("srt", ".")
 
