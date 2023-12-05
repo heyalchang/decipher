@@ -6,7 +6,8 @@ setup(
     author='dsymbol',
     install_requires=[
         'openai-whisper==20231117',
-        'tqdm'
+        'tqdm',
+        'cohere'
     ],
     packages=find_packages(),
     entry_points={
